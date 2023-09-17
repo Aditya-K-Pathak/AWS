@@ -18,3 +18,6 @@ class EC2:
     def terminate_instance(self, INSTANCE_ID: list[str]):
         return self.ec2.terminate_instances(InstanceIds = INSTANCE_ID)
     
+    def list_instances(self):
+        return self.ec2.describe_instances()
+    
