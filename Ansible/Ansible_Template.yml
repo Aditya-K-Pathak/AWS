@@ -1,0 +1,16 @@
+---
+
+- name: <Task Name>
+  hosts: <all/ inventory group>
+  become: true # Gives Root privilage
+
+  tasks:
+  - name: <Install a service>
+    apt:
+      name: <service name>
+      state: present
+
+  - name: <start a service>
+      name: <nginx>
+      state: started
+
